@@ -14,7 +14,7 @@ app.factory('drumMachine', function($http, $q, timerQueue) {
 
   function loadInstruments(instrumentFile) {
     var item, player, instrument;
-    var file = instrumentFile || "/fibonacci-drum-machine/app/services/data/instruments/kit-1.json";
+    var file = instrumentFile || "/app/services/data/instruments/kit-1.json";
 
     return $http.get(file).then(function(response) {
       for(var i = 0; i < 4; i++) {
@@ -29,7 +29,7 @@ app.factory('drumMachine', function($http, $q, timerQueue) {
   }
 
   function loadSequence(sequenceFile) {
-    var file = sequenceFile || "/fibonacci-drum-machine/app/services/data/sequences/seq-1.json";
+    var file = sequenceFile || "/app/services/data/sequences/seq-1.json";
 
     reset();
 
